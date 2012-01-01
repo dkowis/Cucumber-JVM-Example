@@ -1,6 +1,14 @@
 apply plugin: 'java'
 
-
 repositories {
-  mavenCentral()
+    mavenCentral()
+
+    //Repo for the Cucumber-jvm snapshots!
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+dependencies {
+    testRuntime 'info.cukes:cucumber-core:1.0.0-SNAPSHOT'
 }
