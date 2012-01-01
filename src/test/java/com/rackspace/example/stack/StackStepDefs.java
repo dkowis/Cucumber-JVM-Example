@@ -22,9 +22,8 @@ public class StackStepDefs {
     }
 
     @When("^I push another item into the stack$")
-    @Pending
     public void I_push_another_item_into_the_stack() {
-        // Express the Regexp above with the code you wish you had
+        I_push_an_item_into_the_stack();
     }
 
     @Given("^an empty stack$")
@@ -43,9 +42,8 @@ public class StackStepDefs {
     }
 
     @Then("^the stack contains two items$")
-    @Pending
     public void the_stack_contains_two_items() {
-        // Express the Regexp above with the code you wish you had
+        assertEquals(2, myStack.size());
     }
 
     @When("^I push an item into the stack$")
