@@ -2,12 +2,14 @@ package com.rackspace.example.stack.step_definitions;
 
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
+import cucumber.runtime.java.StepDefAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import static junit.framework.Assert.assertEquals;
 
 @Component
+@StepDefAnnotation
 public class StringStackExampleSteps {
 
     @Autowired

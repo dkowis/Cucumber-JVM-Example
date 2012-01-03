@@ -14,6 +14,10 @@
 
 
     <context:component-scan base-package="com.rackspace.example.stack.step_definitions">
+        <context:include-filter
+                type="annotation"
+                expression="cucumber.runtime.java.StepDefAnnotation"/>
     </context:component-scan>
+
 
 </beans>
