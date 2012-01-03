@@ -27,4 +27,9 @@ public class CucumberHooks {
     public void before() {
         System.out.println("here I'm running before the scenario starts!");
     }
+    
+    @After
+    public void doSomethingElse() {
+        System.out.println("hey look I'm doing something else after!");
+    }
 }
