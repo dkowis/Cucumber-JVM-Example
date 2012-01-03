@@ -3,10 +3,12 @@ package com.rackspace.example.stack.step_definitions;
 import cucumber.annotation.After;
 import cucumber.annotation.Before;
 import cucumber.runtime.ScenarioResult;
+import cucumber.runtime.java.StepDefAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@StepDefAnnotation
 public class CucumberHooks {
 
     @Autowired
