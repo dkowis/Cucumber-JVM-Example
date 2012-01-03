@@ -30,3 +30,11 @@ Feature: I need a stack!
     | blarg                  |
     | a string               |
     | another string hooray! |
+
+  Scenario: A stack with lots of things in it
+    When I push many things into the stack:
+      | blargh |
+      | foo    |
+      | bar    |
+      | baz    |
+    Then the stack contains "4" items
