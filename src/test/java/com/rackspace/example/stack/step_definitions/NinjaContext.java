@@ -8,6 +8,7 @@ public class NinjaContext {
     private RackStack myStack;
     private Object pushed;
     private Object popped;
+    private String myString;
 
     public Object getPushed() {
         return pushed;
@@ -31,5 +32,13 @@ public class NinjaContext {
 
     public void setMyStack(RackStack myStack) {
         this.myStack = myStack;
+    }
+
+    public void setMyString(String s) {
+        myString = s;
+    }
+
+    public String getMyString() {
+        return myString;
     }
 }
