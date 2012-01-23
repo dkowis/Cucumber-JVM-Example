@@ -10,20 +10,38 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <packaging>jar</packaging>
     <name>Examples: Java Stack</name>
 
+    <properties>
+        <org.springframework.version>3.0.6.RELEASE</org.springframework.version>
+        <cucumber-jvm-version>1.0.0.RC11</cucumber-jvm-version>
+    </properties>
+
     <repositories>
         <repository>
             <id>sonatype-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
     </repositories>
-    <properties>
-        <cucumber-jvm-version>1.0.0.RC11</cucumber-jvm-version>
-    </properties>
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>info.cukes</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
+            <artifactId>cucumber-spring</artifactId>
             <version>${cucumber-jvm-version}</version>
             <scope>test</scope>
         </dependency>
