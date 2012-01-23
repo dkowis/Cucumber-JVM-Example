@@ -16,18 +16,21 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
     </repositories>
+    <properties>
+        <cucumber-jvm-version>1.0.0.RC11</cucumber-jvm-version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>1.0.0.RC2-SNAPSHOT</version>
+            <version>${cucumber-jvm-version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>1.0.0.RC2-SNAPSHOT</version>
+            <version>${cucumber-jvm-version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
