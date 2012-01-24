@@ -44,14 +44,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                                       classpathref="maven.test.classpath"
                                       failonerror="true"
                                         >
-                                    <!-- set up system properties things for the cucumber-spring backend -->
-                                    <sysproperty key="log4j.configuration"
-                                                 value="file:///${project.basedir}/target/test-classes/log4j.properties"/>
-                                    <sysproperty key="incident.properties.location"
-                                                 value="${project.basedir}/target/properties/${incident.environment}/incident-service.properties"/>
-                                    <sysproperty key="incident.secrets.location" value="${test.environment.secrets}"/>
-                                    <sysproperty key="zendesk.properties.location" value="${test.zendesk.properties}"/>
-
                                     <arg value="-f"/>
                                     <arg value="pretty"/>
                                     <!-- add a second pretty outputter to a file -->
