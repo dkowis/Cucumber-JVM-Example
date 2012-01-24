@@ -12,7 +12,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <properties>
         <org.springframework.version>3.0.6.RELEASE</org.springframework.version>
-        <cucumber-jvm-version>1.0.0.RC11</cucumber-jvm-version>
+        <cucumber-jvm-version>1.0.0.RC13-SNAPSHOT</cucumber-jvm-version>
     </properties>
 
     <repositories>
@@ -21,6 +21,64 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
     </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <!-- this one will execute the cucumbers -->
+                    <execution>
+                        <phase>integration-test</phase>
+                        <id>run-cucumbers</id>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <echo message="Running Cucumber Ruby Features"/>
+                                <java fork="true"
+                                      classname="cucumber.cli.Main"
+                                      classpathref="maven.test.classpath"
+                                      failonerror="true"
+                                        >
+                                    <!-- set up system properties things for the cucumber-spring backend -->
+                                    <sysproperty key="log4j.configuration"
+                                                 value="file:///${project.basedir}/target/test-classes/log4j.properties"/>
+                                    <sysproperty key="incident.properties.location"
+                                                 value="${project.basedir}/target/properties/${incident.environment}/incident-service.properties"/>
+                                    <sysproperty key="incident.secrets.location" value="${test.environment.secrets}"/>
+                                    <sysproperty key="zendesk.properties.location" value="${test.zendesk.properties}"/>
+
+                                    <arg value="-f"/>
+                                    <arg value="pretty"/>
+                                    <!-- add a second pretty outputter to a file -->
+                                    <arg value="-f"/>
+                                    <arg value="pretty"/>
+                                    <arg value="-o"/>
+                                    <arg value="target/pretty.log"/>
+                                    <!-- add an html barfer to put an html report out -->
+                                    <arg value="-f"/>
+                                    <arg value="html"/>
+                                    <arg value="-o"/>
+                                    <arg value="target"/>
+                                    <!-- glue path for spring step definitions -->
+                                    <arg value="--glue"/>
+                                    <arg value="com.rackspace.example.stack.step_definitions"/>
+                                    <!-- Feature file path to find features in -->
+                                    <arg value="."/>
+                                </java>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 
     <dependencies>
         <dependency>
