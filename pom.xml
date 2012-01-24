@@ -60,7 +60,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                                     <arg value="--glue"/>
                                     <arg value="com.rackspace.example.stack.step_definitions"/>
                                     <!-- Feature file path to find features in -->
-                                    <arg value="."/>
+                                    <arg value="src/test/resources"/>
                                 </java>
                             </target>
                         </configuration>
