@@ -6,6 +6,6 @@ import org.junit.runner.RunWith;
 
 @RunWith(value = Cucumber.class)
 @Feature(value = "stack.feature")
-public class stack_Test {
+public class stackTest {
 
 }
