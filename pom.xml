@@ -12,7 +12,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <properties>
         <org.springframework.version>3.0.6.RELEASE</org.springframework.version>
-        <cucumber-jvm-version>1.0.0.RC13-SNAPSHOT</cucumber-jvm-version>
+        <cucumber-jvm-version>1.0.0.RC15</cucumber-jvm-version>
     </properties>
 
     <repositories>
