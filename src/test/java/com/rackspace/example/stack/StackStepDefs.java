@@ -1,8 +1,6 @@
 package com.rackspace.example.stack;
 
 
-import cucumber.annotation.Pending;
-import cucumber.annotation.en.And;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
@@ -10,7 +8,7 @@ import cucumber.annotation.en.When;
 import static junit.framework.Assert.assertEquals;
 
 public class StackStepDefs {
-    
+
     private RackStack myStack;
     private Object pushed;
     private Object popped;

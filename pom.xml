@@ -18,7 +18,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         </repository>
     </repositories>
     <properties>
-        <cucumber-jvm-version>1.0.0.RC15</cucumber-jvm-version>
+        <cucumber-jvm-version>1.0.9</cucumber-jvm-version>
     </properties>
 
     <dependencies>
