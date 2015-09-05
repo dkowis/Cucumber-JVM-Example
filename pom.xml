@@ -10,15 +10,8 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <packaging>jar</packaging>
     <name>Examples: Java Stack</name>
 
-
-    <repositories>
-        <repository>
-            <id>sonatype-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </repository>
-    </repositories>
     <properties>
-        <cucumber-jvm-version>1.0.9</cucumber-jvm-version>
+        <cucumber-jvm-version>1.2.4</cucumber-jvm-version>
     </properties>
 
     <dependencies>
@@ -37,7 +30,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
